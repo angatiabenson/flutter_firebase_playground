@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class CryptoApi {
-  static const String _baseUrl = 'https://api.coincap.io/v2/rate';
+  static const String _baseUrl = 'https://api.coincap.io/v2/rates';
 
   Future<List<dynamic>> fetchCryptoData() async {
     final response = await http.get(Uri.parse(_baseUrl));
