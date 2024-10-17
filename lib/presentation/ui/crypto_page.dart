@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_firebase_playground/presentation/ui/widgets/crypto_card.dart';
 import 'package:get/get.dart';
 
-import 'crypto_controller.dart';
+import 'controllers/crypto_controller.dart';
 
 class CryptoPage extends StatelessWidget {
   const CryptoPage({super.key});

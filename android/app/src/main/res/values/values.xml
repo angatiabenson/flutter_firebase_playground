@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="google_app_id" translatable="false">1:625022959457:android:281c0ea2bf3c3ac8ec0f20</string>
+    <string name="google_api_key" translatable="false">AIzaSyBMqDLZF9MPfzWhhfR2CxC2llRdKSCZuVs</string>
+    <string name="firebase_database_url" translatable="false">https://flutterfirebaseplaygroun-e6c5e.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">625022959457</string>
+    <string name="project_id" translatable="false">flutterfirebaseplaygroun-e6c5e</string>
+    <string name="storage_bucket" translatable="false">flutterfirebaseplaygroun-e6c5e.appspot.com</string>
+</resources>
