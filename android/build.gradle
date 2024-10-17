@@ -1,5 +1,18 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.3.2'  // Ensure you have the correct version
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:3.0.2'  // Ensure Crashlytics is included
+        classpath 'com.google.gms:google-services:4.4.2'
+    }
+}
+
+
 allprojects {
     repositories {
         google()

@@ -1,3 +1,4 @@
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase_playground/presentation/ui/controllers/version_check_controller.dart';
 import 'package:get/get.dart';
@@ -35,7 +36,8 @@ class CryptoController extends GetxController {
     try {
       isLoading(true);
       cryptoList.value = await repository.getCryptoCurrencies();
-    } catch (e) {
+    } catch (e, s) {
+      await FirebaseCrashlytics.instance.recordError(e, s);
       MLogger.debug('Error fetching data: $e');
     } finally {
       isLoading(false);
