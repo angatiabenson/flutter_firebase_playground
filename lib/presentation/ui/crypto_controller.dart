@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-import '../domain/models/crypto_model.dart';
-import '../domain/repo/crypto_repository.dart';
+import '../../domain/models/crypto_model.dart';
+import '../../domain/repo/crypto_repository.dart';
 
 class CryptoController extends GetxController {
   final CryptoRepository repository;

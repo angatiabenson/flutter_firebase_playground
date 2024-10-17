@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_playground/presentation/ui/widgets/crypto_card.dart';
 import 'package:get/get.dart';
 
 import 'crypto_controller.dart';
@@ -12,7 +13,10 @@ class CryptoPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Crypto Rates'),
+        title: const Text(
+          'Crypto Rates',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
       ),
       body: Obx(() {
         if (controller.isLoading.value) {
@@ -23,19 +27,7 @@ class CryptoPage extends StatelessWidget {
           itemCount: controller.cryptoList.length,
           itemBuilder: (context, index) {
             final crypto = controller.cryptoList[index];
-            return Card(
-              margin: const EdgeInsets.all(8.0),
-              child: ListTile(
-                leading: crypto.currencySymbol != 'N/A'
-                    ? Text(
-                        crypto.currencySymbol,
-                        style: TextStyle(fontSize: 24),
-                      )
-                    : Icon(Icons.monetization_on),
-                title: Text('${crypto.symbol} (${crypto.type})'),
-                subtitle: Text('Rate (USD): ${crypto.rateUsd}'),
-              ),
-            );
+            return CryptoCard(crypto: crypto);
           },
         );
       }),
